@@ -109,8 +109,7 @@ img {
   margin-right: 0;
 }
 
-.link-navigation,
-.link-navigation-activ {
+.link-navigation {
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
@@ -125,18 +124,25 @@ img {
   color: var(--blue--);
 }
 
-.link-navigation-activ:active,
-.link-navigation-activ:hover,
-.link-navigation-activ:focus {
+.link-navigation.activ:active {
   color: var(--blue--);
 }
 
 .link-navigation.current {
+  position: relative;
+
   color: var(--blue--);
 }
 
-.link-navigation-activ.current {
-  color: var(--blue--);
+.link-navigation::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--blue--);
 }
 
 /*header-gruop*/
@@ -252,6 +258,52 @@ img {
 
 .btn:active {
   color: #d9d9d9;
+}
+
+/*Modal form*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.modal-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14),
+    0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: #fff;
+}
+
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /*Особливості*/
