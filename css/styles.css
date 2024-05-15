@@ -121,8 +121,11 @@ img {
   letter-spacing: 0.02em;
   color: var(--bleak-grey-text--);
   text-decoration: none;
+
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color 250ms ease-out;
 }
 
 .link-navigation:hover,
@@ -171,13 +174,17 @@ img {
 .link-header-phone {
   display: flex;
   align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   letter-spacing: 0.02em;
   color: #757575;
   text-decoration: none;
+
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition: color var(--anim-slov);
 }
 
 .link-contacts-mail:hover,
@@ -251,19 +258,27 @@ img {
   margin-left: auto;
   border: 0;
   border-radius: 4px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
   text-align: center;
   color: var(--white--);
+
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  background: #188ce8;
+  background: var(--blue--);
   cursor: pointer;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.btn:active {
+.btn:hover,
+.btn:focus {
   color: #d9d9d9;
+  background-color: #188ce8;
 }
 
 /*Modal form*/
@@ -487,12 +502,11 @@ img {
   height: 44px;
   background-color: #fff;
   border-radius: 50%;
+
+  transition: background-color var(--anim-slov);
 }
 
-.socials-link:hover {
-  background-color: var(--blue--);
-}
-
+.socials-link:hover,
 .socials-link:focus {
   background-color: var(--blue--);
 }
@@ -501,15 +515,17 @@ img {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
+
+  transition: fill var(--anim-slov);
 }
 
 .socials-link:hover .socials-icon,
-.socials-link:hover .socials-icon {
+.socials-link:focus .socials-icon {
   fill: #fff;
 }
 
-.socials-link:focus .socials-icon,
-.socials-link:focus .socials-icon {
+/*.socials-link:focus .socials-icon,.socials-link:hover .socials-icon
+ {
   fill: #fff;
 }
 
@@ -533,6 +549,8 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition: border-color var(--anim-slov);
 }
 
 .clients-link:hover,
@@ -542,6 +560,7 @@ img {
 
 .clients-icons {
   fill: #afb1b8;
+  transition: fill var(--anim-slov);
 }
 
 :focus {
@@ -652,6 +671,7 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--white--);
+
   border-radius: 4px;
   width: 73px;
   height: 38px;
@@ -659,6 +679,8 @@ img {
   cursor: pointer;
   border: none;
   padding: 6px 22px;
+
+  transition: box-shadow var(--anim-slov);
 }
 
 .btn-filters1:active,
@@ -676,12 +698,15 @@ img {
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--bleak-grey-text--);
+
   border-radius: 4px;
   height: 38px;
   background: #f5f4fa;
   cursor: pointer;
   border: none;
   padding: 6px 22px;
+
+  transition: background color box-shadow var(--anim-slov);
 }
 
 .btn-filters:hover,
