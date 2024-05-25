@@ -184,7 +184,7 @@ img {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  transition: color var(--anim-slov);
+  transition: transform var(--anim-slov), color var(--anim-slov);
 }
 
 .link-contacts-mail:hover,
@@ -285,6 +285,7 @@ img {
 
 .backdrop {
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   width: 100%;
@@ -296,6 +297,8 @@ img {
 
 .modal-wrapper {
   position: absolute;
+  content: "";
+
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -311,6 +314,7 @@ img {
 
 .modal-btn {
   position: absolute;
+  content: "";
   top: 8px;
   right: 8px;
 
@@ -503,7 +507,7 @@ img {
   background-color: #fff;
   border-radius: 50%;
 
-  transition: background-color var(--anim-slov);
+  transition: transform var(--anim-slov), background-color var(--anim-slov);
 }
 
 .socials-link:hover,
@@ -516,7 +520,7 @@ img {
   height: 20px;
   fill: #afb1b8;
 
-  transition: fill var(--anim-slov);
+  transition: transform var(--anim-slov), fill var(--anim-slov);
 }
 
 .socials-link:hover .socials-icon,
@@ -550,7 +554,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition: border-color var(--anim-slov);
+  transition: transform var(--anim-slov), border-color var(--anim-slov);
 }
 
 .clients-link:hover,
@@ -560,7 +564,7 @@ img {
 
 .clients-icons {
   fill: #afb1b8;
-  transition: fill var(--anim-slov);
+  transition: transform var(--anim-slov), fill var(--anim-slov);
 }
 
 :focus {
@@ -680,7 +684,8 @@ img {
   border: none;
   padding: 6px 22px;
 
-  transition: box-shadow var(--anim-slov);
+  transition: transform var(--anim-slov), box-shadow var(--anim-slov),
+    background var(--anim-slov);
 }
 
 .btn-filters1:active,
@@ -705,8 +710,8 @@ img {
   cursor: pointer;
   border: none;
   padding: 6px 22px;
-
-  transition: background color box-shadow var(--anim-slov);
+  transition: transform var(--anim-slov), box-shadow var(--anim-slov),
+    background var(--anim-slov), color var(--anim-slov);
 }
 
 .btn-filters:hover,
@@ -733,22 +738,21 @@ img {
   background: #fff;
 }
 
-.gruop-item {
-  background: #fff;
-}
-
-.link-project:hover,
-.link-project:focus {
-  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
-    0 1px 1px 0 rgba(0, 0, 0, 0.12);
-}
 .gruop-item:hover .finger-description {
+  transition: transform var(--anim-slov);
   transform: translateY(0);
 }
 
 .link-project {
   text-decoration: none;
   display: block;
+  transition: transform var(--anim-slov), box-shadow var(--anim-slov);
+}
+
+.link-project:hover,
+.link-project:focus {
+  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06),
+    0 1px 1px 0 rgba(0, 0, 0, 0.12);
 }
 
 .finger-project {
