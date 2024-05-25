@@ -738,7 +738,8 @@ img {
   background: #fff;
 }
 
-.gruop-item:hover .finger-description {
+.link-project:hover .finger-description,
+.link-project:focus .finger-description {
   transition: transform var(--anim-slov);
   transform: translateY(0);
 }
